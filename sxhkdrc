@@ -1,0 +1,11 @@
+#Scrnshot
+Print
+	maim desktop-$(date '+%y%m%d-%H%M-%S').png
+
+#Sound
+XF86Audio{Raise,Lower}Volume
+	pulsemixer --change-volume {+,-}5
+XF86AudioMute
+	pulsemixer --toggle-mute
+XF86Audio{Play,Stop,Next,Prev}
+	playerctl {play-pause,stop,next,previous}
