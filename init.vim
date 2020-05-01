@@ -24,7 +24,7 @@ set encoding=utf-8
 set number
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
-set list listchars=space:·
+set list listchars=tab:>-,space:·
 set bg=light
 colorscheme NeoSolarized
 set cursorline
