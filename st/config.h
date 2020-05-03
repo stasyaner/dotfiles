@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -83,7 +83,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
+static const char *altcolorname[] = {
 	/* solarized dark */
 	"#073642",  /*  0: black    */
 	"#dc322f",  /*  1: red      */
@@ -104,7 +104,7 @@ static const char *colorname[] = {
 };
 
 /* Terminal colors for alternate (light) palette */
-static const char *altcolorname[] = {
+static const char *colorname[] = {
 	/* solarized light */
 	"#eee8d5",  /*  0: black    */
 	"#dc322f",  /*  1: red      */
@@ -197,6 +197,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+	{ ControlMask,          XK_k,           kscrollup,      {.i =  3} },
+	{ ControlMask,          XK_j,           kscrolldown,    {.i =  3} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ XK_ANY_MOD,           XK_F6,          swapcolors,     {.i =  0} },
