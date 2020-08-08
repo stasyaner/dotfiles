@@ -1,10 +1,9 @@
 #!/bin/sh
 
-[ -f ~/.xprofile ] && . ~/.xprofile
+[ -f ~/dotfiles/.xprofile ] && . ~/dotfiles/.xprofile
 
-ssh-agent
+# commented out as it freezes tpads
+#unclutter &
+
+eval $(ssh-agent)
 exec dwm
-
-#while true; do
-#        ssh-agent dwm
-#done
