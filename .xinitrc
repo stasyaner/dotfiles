@@ -4,6 +4,8 @@
 
 # commented out as it freezes tpads
 #unclutter &
+# turn the beep off
+xset -b
 
 eval $(ssh-agent)
 exec dwm
